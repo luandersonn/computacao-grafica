@@ -10,6 +10,7 @@ void init();
 void display();
 void keyboard(unsigned char, int, int);
 
+/* methods */
 void triangle(float[3], float[3], float[3], float[3]);
 void rectangle(float[3], float[3], float[3], float[3], float[3]);
 
@@ -40,27 +41,27 @@ void init()
 void display(void)
 {
 	glClear(GL_COLOR_BUFFER_BIT);
-	rectangle(color, vertices[0], vertices[1], vertices[2], vertices[3]);	
+	rectangle(color, vertices[0], vertices[1], vertices[2], vertices[3]);
 	glFlush();
 }
 
-void triangle(float color[3], float x[3], float y[3], float z[3])
+void triangle(float color[3], float vertex1[3], float vertex2[3], float vertex3[3])
 {
 	glBegin(GL_TRIANGLES);
 	glColor3fv(color);
-	glVertex3fv(x);
-	glVertex3fv(y);
-	glVertex3fv(z);
+	glVertex3fv(vertex1);
+	glVertex3fv(vertex2);
+	glVertex3fv(vertex3);
 	glEnd();
 }
 
-void rectangle(float color[3], float p1[3], float p2[3], float p3[3], float p4[3])
+void rectangle(float color[3], float vertex1[3], float vertex2[3], float vertex3[3], float vertex4[3])
 {
-	triangle(color, p1, p2, p3);
+	triangle(color, vertex1, vertex2, vertex3);
 	color[0] = .20;
 	color[1] = .20;
 	color[2] = .20;
-	triangle(color, p2, p3, p4);
+	triangle(color, vertex2, vertex3, vertex4);
 }
 
 void keyboard(unsigned char key, int x, int y)
