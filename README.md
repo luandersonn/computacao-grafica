@@ -1,4 +1,4 @@
-# computacao-grafica
-Projetos da disciplina de computação
+# Computação Gráfica
+Projetos da disciplina de computação gráfica
 
 <img src="/captura de tela.png" alt="Captura de tela">
