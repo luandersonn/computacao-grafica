@@ -1,0 +1,8 @@
+enum TetrisBlockType
+{
+    TETRIS_BLOCK_TYPE_I = 0,
+    TETRIS_BLOCK_TYPE_L = 1,
+    TETRIS_BLOCK_TYPE_T = 2,
+    TETRIS_BLOCK_TYPE_Z = 3,
+    TETRIS_BLOCK_TYPE_O = 4
+};

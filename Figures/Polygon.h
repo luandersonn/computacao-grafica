@@ -1,11 +1,6 @@
 #include <GL/glut.h>
 #include <vector>
-
-struct Point
-{
-    int x, y, z;
-};
-
+#include "../util/Point.h"
 
 class Polygon
 {    
